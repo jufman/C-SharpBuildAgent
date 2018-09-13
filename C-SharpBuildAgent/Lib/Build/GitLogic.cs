@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using LibGit2Sharp;
 using LibGit2Sharp.Handlers;
 
@@ -44,7 +45,7 @@ namespace C_SharpBuildAgent.Lib.Build
 
             Directory.CreateDirectory(destination);
 
-            try
+            try 
             {
                 CloneOptions options = new CloneOptions
                 {
@@ -56,6 +57,7 @@ namespace C_SharpBuildAgent.Lib.Build
             }
             catch (Exception e)
             { 
+                MessageBox.Show("Error: " + e.Message);
                 return false;
             }
 

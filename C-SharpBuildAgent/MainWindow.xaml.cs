@@ -1,17 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
 using C_SharpBuildAgent.Lib.Build;
 using C_SharpBuildAgent.Lib.Build.Objects;
 using C_SharpBuildAgent.Lib.Settings.Objects;
@@ -30,12 +17,11 @@ namespace C_SharpBuildAgent
 
         private void TestButton_Click(object sender, RoutedEventArgs e)
         {
-            Lib.Build.Logic buildLogic = new Logic(new Details()
+            Logic buildLogic = new Logic(new Details()
             {
                 TempFolderLocation = @"C:\temp\AutoBuild\",
-                PublicKeyLocation = @"C:\Users\userc\.ssh\pub.key",
-                PrivriteKeyLocation = @"C:\Users\userc\.ssh\Pub-2.ppk",
-                MsBuildEXELocaion = ""
+                PublicKeyLocation = @"‪C:\Temp\idrsa.key",
+                PrivriteKeyLocation = @"‪‪C:\Temp\github.ppk",
             });
 
             buildLogic.BuildItem(new BuildItem()
